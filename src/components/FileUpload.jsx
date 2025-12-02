@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Box, Button, Typography, CircularProgress, TextField } from '@mui/material'
-import { CloudUpload, Description, WorkOutline, Sparkles } from '@mui/icons-material'
+import { CloudUpload, Description, WorkOutline, AutoAwesome } from '@mui/icons-material'
 import { analyzeResume } from '../utils/analyzeResume'
 
 function FileUpload({ onAnalysisComplete, setLoading, loading }) {
@@ -114,7 +114,7 @@ function FileUpload({ onAnalysisComplete, setLoading, loading }) {
               }} 
             />
             {dragActive && (
-              <Sparkles 
+              <AutoAwesome 
                 className="absolute top-0 right-0 text-yellow-400 animate-pulse" 
                 sx={{ fontSize: 30 }}
               />
@@ -150,7 +150,7 @@ function FileUpload({ onAnalysisComplete, setLoading, loading }) {
             variant="contained"
             onClick={handleAnalyze}
             disabled={loading}
-            startIcon={loading ? <CircularProgress size={20} className="text-white" /> : <Sparkles />}
+            startIcon={loading ? <CircularProgress size={20} className="text-white" /> : <AutoAwesome />}
             className="font-bold px-6 py-3 text-lg"
             sx={{
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
